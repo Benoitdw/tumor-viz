@@ -1,0 +1,738 @@
+{
+    "0": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "1": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "2": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "3": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 809604
+    },
+    "4": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "5": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1214406
+    },
+    "6": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 728644
+    },
+    "7": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 383496
+    },
+    "8": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 728644
+    },
+    "9": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "10": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "11": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "12": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "13": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "14": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "15": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 404802
+    },
+    "16": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 428614
+    },
+    "17": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "18": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "19": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 607203
+    },
+    "20": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "21": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "22": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "23": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "24": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "25": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "26": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "27": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "28": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 383496
+    },
+    "29": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 428614
+    },
+    "30": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "31": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 560495
+    },
+    "32": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 455402
+    },
+    "33": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 662403
+    },
+    "34": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "35": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 404802
+    },
+    "36": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 404802
+    },
+    "37": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 809604
+    },
+    "38": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 560495
+    },
+    "39": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1457288
+    },
+    "40": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 607203
+    },
+    "41": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1214406
+    },
+    "42": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "43": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "44": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 662403
+    },
+    "45": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "46": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 662403
+    },
+    "47": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 383496
+    },
+    "48": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "49": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 728644
+    },
+    "50": {
+        "clone_proportion": {
+            "0": 0.014563912256130742,
+            "1": 0.9854360877438693
+        },
+        "mrca": 0,
+        "size": 560495
+    },
+    "51": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 728644
+    },
+    "52": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "53": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 404802
+    },
+    "54": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "55": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1214406
+    },
+    "56": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 455402
+    },
+    "57": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 662403
+    },
+    "58": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 662403
+    },
+    "59": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "60": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 383496
+    },
+    "61": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 809604
+    },
+    "62": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1214406
+    },
+    "63": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "64": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "65": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "66": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "67": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "68": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "69": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1457288
+    },
+    "70": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 404802
+    },
+    "71": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "72": {
+        "clone_proportion": {
+            "1": 0.994081609125993,
+            "2": 0.005918390874007059
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "73": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "74": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 607203
+    },
+    "75": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 364322
+    },
+    "76": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "77": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 383496
+    },
+    "78": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "79": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 455402
+    },
+    "80": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 2428813
+    },
+    "81": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "82": {
+        "clone_proportion": {
+            "1": 0.9158782615378703,
+            "2": 0.07280674787687814,
+            "3": 0.002357529877416132,
+            "5": 0.0036323636782845943,
+            "6": 5.571994005303001e-05,
+            "7": 0.00011528263459247588,
+            "8": 0.0002296045805633478,
+            "9": 0.000168120508780694,
+            "10": 0.000223840448833724,
+            "11": 0.00012681089805172347,
+            "12": 1.9213772432079315e-05,
+            "13": 0.00014794604772701072,
+            "14": 0.000730123352419014,
+            "15": 9.606886216039658e-06,
+            "16": 0.00041982092764093304,
+            "17": 0.0007551012565807171,
+            "18": 2.8820658648118973e-06,
+            "19": 0.0005274180532605771,
+            "20": 0.00028148176612996197,
+            "21": 2.8820658648118973e-06,
+            "22": 0.0005264573646389732,
+            "23": 1.0567574837643623e-05,
+            "24": 5.571994005303001e-05,
+            "25": 0.0002190370057257042,
+            "26": 1.9213772432079315e-05,
+            "27": 0.00013065365253813935,
+            "28": 2.882065864811897e-05,
+            "29": 0.0001930984129423971,
+            "30": 0.0001344964070245552,
+            "32": 7.685508972831726e-06,
+            "33": 7.301233524190139e-05,
+            "35": 7.205164662029743e-05,
+            "36": 2.689928140491104e-05,
+            "38": 9.606886216039657e-07,
+            "39": 1.0567574837643623e-05
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "83": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 560495
+    },
+    "84": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 2428813
+    },
+    "85": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 485762
+    },
+    "86": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 607203
+    },
+    "87": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 428614
+    },
+    "88": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "89": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "90": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "91": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 2428813
+    },
+    "92": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1821610
+    },
+    "93": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "94": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 1040920
+    },
+    "95": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    },
+    "96": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "97": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 455402
+    },
+    "98": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 520460
+    },
+    "99": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 910805
+    }
+}

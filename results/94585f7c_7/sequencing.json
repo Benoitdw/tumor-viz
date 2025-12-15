@@ -1,0 +1,724 @@
+{
+    "0": {
+        "clone_proportion": {
+            "1": 0.9722998754557061,
+            "2": 0.027700124544293988
+        },
+        "mrca": 0,
+        "size": 705773
+    },
+    "1": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 423464
+    },
+    "2": {
+        "clone_proportion": {
+            "2": 0.7417895903535591,
+            "3": 0.258210409646441
+        },
+        "mrca": 0,
+        "size": 1209897
+    },
+    "3": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1411546
+    },
+    "4": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 604948
+    },
+    "5": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 564618
+    },
+    "6": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 445751
+    },
+    "7": {
+        "clone_proportion": {
+            "2": 0.9549053170940727,
+            "3": 0.0450946829059273
+        },
+        "mrca": 0,
+        "size": 445751
+    },
+    "8": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 705773
+    },
+    "9": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 2823093
+    },
+    "10": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 564618
+    },
+    "11": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 423464
+    },
+    "12": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1209897
+    },
+    "13": {
+        "clone_proportion": {
+            "0": 0.37078528172232844,
+            "1": 0.6292147182776716
+        },
+        "mrca": 0,
+        "size": 1209897
+    },
+    "14": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1411546
+    },
+    "15": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 651483
+    },
+    "16": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 846928
+    },
+    "17": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1209897
+    },
+    "18": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 2117320
+    },
+    "19": {
+        "clone_proportion": {
+            "1": 0.31049544506412236,
+            "2": 0.6895045549358776
+        },
+        "mrca": 0,
+        "size": 769934
+    },
+    "20": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 423464
+    },
+    "21": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 2823093
+    },
+    "22": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 769934
+    },
+    "23": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1058660
+    },
+    "24": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 445751
+    },
+    "25": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 604948
+    },
+    "26": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 604948
+    },
+    "27": {
+        "clone_proportion": {
+            "1": 0.48210945912757636,
+            "2": 0.5178905408724236
+        },
+        "mrca": 0,
+        "size": 846928
+    },
+    "28": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 564618
+    },
+    "29": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 498192
+    },
+    "30": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 705773
+    },
+    "31": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 705773
+    },
+    "32": {
+        "clone_proportion": {
+            "0": 0.8532263490197926,
+            "1": 0.1467736509802074
+        },
+        "mrca": 0,
+        "size": 1209897
+    },
+    "33": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 470515
+    },
+    "34": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 423464
+    },
+    "35": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 941031
+    },
+    "36": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 470515
+    },
+    "37": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1693856
+    },
+    "38": {
+        "clone_proportion": {
+            "0": 0.6006844737687265,
+            "1": 0.3993155262312735
+        },
+        "mrca": 0,
+        "size": 1693856
+    },
+    "39": {
+        "clone_proportion": {
+            "0": 0.6265174872338376,
+            "1": 0.37348251276616246
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "40": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 941031
+    },
+    "41": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1693856
+    },
+    "42": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 564618
+    },
+    "43": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 498192
+    },
+    "44": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 564618
+    },
+    "45": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 846928
+    },
+    "46": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 470515
+    },
+    "47": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1693856
+    },
+    "48": {
+        "clone_proportion": {
+            "0": 0.7572441950091531,
+            "1": 0.2427558049908469
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "49": {
+        "clone_proportion": {
+            "1": 0.09100714582585533,
+            "2": 0.9089928541741447
+        },
+        "mrca": 0,
+        "size": 1693856
+    },
+    "50": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "51": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 470515
+    },
+    "52": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 470515
+    },
+    "53": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 423464
+    },
+    "54": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 769934
+    },
+    "55": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 470515
+    },
+    "56": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 604948
+    },
+    "57": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 423464
+    },
+    "58": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1411546
+    },
+    "59": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 941031
+    },
+    "60": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 2117320
+    },
+    "61": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 941031
+    },
+    "62": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1411546
+    },
+    "63": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 529330
+    },
+    "64": {
+        "clone_proportion": {
+            "1": 0.3462053853698762,
+            "2": 0.6537946146301238
+        },
+        "mrca": 0,
+        "size": 941031
+    },
+    "65": {
+        "clone_proportion": {
+            "0": 0.26172995363595886,
+            "1": 0.7382700463640411
+        },
+        "mrca": 0,
+        "size": 941031
+    },
+    "66": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 941031
+    },
+    "67": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 705773
+    },
+    "68": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 769934
+    },
+    "69": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1058660
+    },
+    "70": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 651483
+    },
+    "71": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 651483
+    },
+    "72": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1411546
+    },
+    "73": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 423464
+    },
+    "74": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 423464
+    },
+    "75": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 651483
+    },
+    "76": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 470515
+    },
+    "77": {
+        "clone_proportion": {
+            "1": 0.960664897134113,
+            "2": 0.03933510286588707
+        },
+        "mrca": 0,
+        "size": 2117320
+    },
+    "78": {
+        "clone_proportion": {
+            "0": 0.23567767693094063,
+            "1": 0.7643223230690593
+        },
+        "mrca": 0,
+        "size": 941031
+    },
+    "79": {
+        "clone_proportion": {
+            "0": 0.00767314431370132,
+            "1": 0.9923268556862986
+        },
+        "mrca": 0,
+        "size": 2823093
+    },
+    "80": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 769934
+    },
+    "81": {
+        "clone_proportion": {
+            "1": 0.9031706355203748,
+            "2": 0.09682936447962519
+        },
+        "mrca": 0,
+        "size": 1693856
+    },
+    "82": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "83": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 1058660
+    },
+    "84": {
+        "clone_proportion": {
+            "2": 0.14599534552564744,
+            "3": 0.6938099741772313,
+            "4": 0.013857156519983422,
+            "5": 0.025206422749540398,
+            "6": 0.08751474448211002,
+            "7": 0.03361635654548739
+        },
+        "mrca": 0,
+        "size": 470515
+    },
+    "85": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 2823093
+    },
+    "86": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 705773
+    },
+    "87": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 564618
+    },
+    "88": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 846928
+    },
+    "89": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 470515
+    },
+    "90": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 651483
+    },
+    "91": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 445751
+    },
+    "92": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 651483
+    },
+    "93": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 2117320
+    },
+    "94": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "95": {
+        "clone_proportion": {
+            "2": 1.0
+        },
+        "mrca": 2,
+        "size": 705773
+    },
+    "96": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 604948
+    },
+    "97": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 498192
+    },
+    "98": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 529330
+    },
+    "99": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 1693856
+    }
+}
