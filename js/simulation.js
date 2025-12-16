@@ -3,6 +3,7 @@ const RESULTS_PATH = './results';
 
 let simulationData = null;
 let sequencingData = null;
+let configData = null;
 let showAllClones = false; // Filter state for phylogenetic tree
 let currentSimulationId = null; // Store current simulation ID for sorting
 
@@ -17,20 +18,30 @@ async function loadSimulationData(simulationId) {
     const loading = document.getElementById('loading');
     const error = document.getElementById('error');
     const content = document.getElementById('content');
-
     try {
-        // Load simulation and sequencing data
-        const [simResponse, seqResponse] = await Promise.all([
-            fetch(`${RESULTS_PATH}/${simulationId}/simulation.json`),
-            fetch(`${RESULTS_PATH}/${simulationId}/sequencing.json`)
+        // Parse simulation ID to get configId and simNum
+        // Expected format: configId_simNum
+        const parts = simulationId.split('_');
+        if (parts.length < 2) {
+            throw new Error('Invalid simulation ID format. Expected: configId_simNum');
+        }
+        const configId = parts.slice(0, -1).join('_'); // Handle configIds that may contain underscores
+        const simNum = parts[parts.length - 1];
+
+        // Load simulation, sequencing, and config data
+        const [simResponse, seqResponse, configResponse] = await Promise.all([
+            fetch(`${RESULTS_PATH}/${configId}/${simNum}/simulation.json`),
+            fetch(`${RESULTS_PATH}/${configId}/${simNum}/sequencing.json`),
+            fetch(`${RESULTS_PATH}/${configId}/config.json`)
         ]);
 
-        if (!simResponse.ok || !seqResponse.ok) {
+        if (!simResponse.ok || !seqResponse.ok || !configResponse.ok) {
             throw new Error('Failed to load simulation data');
         }
 
         simulationData = await simResponse.json();
         sequencingData = await seqResponse.json();
+        configData = await configResponse.json();
 
         // Update page title
         document.getElementById('simulationTitle').textContent = `Simulation: ${simulationId}`;
@@ -76,32 +87,31 @@ async function loadSimulationData(simulationId) {
 // Render configuration info
 function renderConfig() {
     const configInfo = document.getElementById('configInfo');
-    const config = simulationData.config;
 
     configInfo.innerHTML = `
         <div class="col-md-3">
             <strong>N Events:</strong><br>${simulationData.n_event?.toLocaleString() || 'N/A'}
         </div>
         <div class="col-md-3">
-            <strong>N Max:</strong><br>${config.N_max?.toLocaleString() || 'N/A'}
+            <strong>N Max:</strong><br>${configData.N_max?.toLocaleString() || 'N/A'}
         </div>
         <div class="col-md-3">
             <strong>Total Clones:</strong><br>${simulationData.clones?.length || 'N/A'}
         </div>
         <div class="col-md-3">
-            <strong>Mutation Rate:</strong><br>${config.mutation_rate || 'N/A'}
+            <strong>Mutation Rate:</strong><br>${configData.mutation_rate || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
-            <strong>P Death:</strong><br>${config.P_death || 'N/A'}
+            <strong>P Death:</strong><br>${configData.P_death || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
-            <strong>Sequencing Depth:</strong><br>${config.depth_sequencing || 'N/A'}
+            <strong>Sequencing Depth:</strong><br>${configData.depth_sequencing || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
-            <strong>N Sequencing:</strong><br>${config.n_sequencing || 'N/A'}
+            <strong>N Sequencing:</strong><br>${configData.n_sequencing || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
-            <strong>Picking Strategy:</strong><br>${config.picking || 'N/A'}
+            <strong>Picking Strategy:</strong><br>${configData.picking || 'N/A'}
         </div>
     `;
 }

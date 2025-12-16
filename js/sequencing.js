@@ -20,10 +20,19 @@ async function loadSequencingData(simId, seqId) {
     const content = document.getElementById('content');
 
     try {
+        // Parse simulation ID to get configId and simNum
+        // Expected format: configId_simNum
+        const parts = simId.split('_');
+        if (parts.length < 2) {
+            throw new Error('Invalid simulation ID format. Expected: configId_simNum');
+        }
+        const configId = parts.slice(0, -1).join('_'); // Handle configIds that may contain underscores
+        const simNum = parts[parts.length - 1];
+
         // Load both sequencing and simulation data
         const [seqResponse, simResponse] = await Promise.all([
-            fetch(`${RESULTS_PATH}/${simId}/sequencing.json`),
-            fetch(`${RESULTS_PATH}/${simId}/simulation.json`)
+            fetch(`${RESULTS_PATH}/${configId}/${simNum}/sequencing.json`),
+            fetch(`${RESULTS_PATH}/${configId}/${simNum}/simulation.json`)
         ]);
 
         if (!seqResponse.ok || !simResponse.ok) {
