@@ -1,0 +1,74 @@
+{
+    "0": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 41626
+    },
+    "1": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 56493
+    },
+    "2": {
+        "clone_proportion": {
+            "0": 0.7550242694816484,
+            "1": 0.24497573051835161
+        },
+        "mrca": 0,
+        "size": 71901
+    },
+    "3": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 56493
+    },
+    "4": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 71901
+    },
+    "5": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 65909
+    },
+    "6": {
+        "clone_proportion": {
+            "0": 1.0
+        },
+        "mrca": 0,
+        "size": 65909
+    },
+    "7": {
+        "clone_proportion": {
+            "0": 0.6550369072274441,
+            "1": 0.3449630927725559
+        },
+        "mrca": 0,
+        "size": 56493
+    },
+    "8": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 56493
+    },
+    "9": {
+        "clone_proportion": {
+            "1": 1.0
+        },
+        "mrca": 1,
+        "size": 197727
+    }
+}

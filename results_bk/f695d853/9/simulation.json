@@ -1,0 +1,160 @@
+{
+    "n_event": 240002,
+    "clone_proportion": {
+        "0": 0.7239007219357978,
+        "1": 0.003113874120449481,
+        "2": 0.2539691832575295,
+        "3": 0.014292352895976114,
+        "4": 0.0036517583692227754,
+        "5": 3.65907652226731e-06,
+        "6": 0.0002744307391700483,
+        "7": 0.00034395319309312713,
+        "8": 3.65907652226731e-06,
+        "9": 0.0001390449078461578,
+        "10": 0.00017929474959109819,
+        "11": 8.049968348988083e-05,
+        "12": 2.195445913360386e-05,
+        "13": 1.463630608906924e-05,
+        "14": 3.65907652226731e-06,
+        "15": 3.65907652226731e-06,
+        "16": 3.65907652226731e-06
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 247359,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 0.4328048112496239,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 1055,
+            "tmb": 273
+        },
+        {
+            "id": 2,
+            "fitness": 1.4778309037009558,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 87249,
+            "tmb": 247
+        },
+        {
+            "id": 3,
+            "fitness": 2.4773102676570518,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 4921,
+            "tmb": 320
+        },
+        {
+            "id": 4,
+            "fitness": 3.79647380609184,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 1227,
+            "tmb": 401
+        },
+        {
+            "id": 5,
+            "fitness": 1.347404860115557,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 395
+        },
+        {
+            "id": 6,
+            "fitness": 4.711592123717205,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 94,
+            "tmb": 359
+        },
+        {
+            "id": 7,
+            "fitness": 4.368885627108382,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 133,
+            "tmb": 424
+        },
+        {
+            "id": 8,
+            "fitness": 1.087988460617283,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 3,
+            "tmb": 504
+        },
+        {
+            "id": 9,
+            "fitness": 3.4690732812956133,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 54,
+            "tmb": 371
+        },
+        {
+            "id": 10,
+            "fitness": 4.484020396541674,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 57,
+            "tmb": 473
+        },
+        {
+            "id": 11,
+            "fitness": 5.555689269182832,
+            "ancestor": 10,
+            "dead_lineage": false,
+            "size": 25,
+            "tmb": 514
+        },
+        {
+            "id": 12,
+            "fitness": 4.716738357356238,
+            "ancestor": 9,
+            "dead_lineage": false,
+            "size": 11,
+            "tmb": 408
+        },
+        {
+            "id": 13,
+            "fitness": 4.577051150951898,
+            "ancestor": 10,
+            "dead_lineage": false,
+            "size": 5,
+            "tmb": 523
+        },
+        {
+            "id": 14,
+            "fitness": 5.503376389826663,
+            "ancestor": 7,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 565
+        },
+        {
+            "id": 15,
+            "fitness": 5.343151236112412,
+            "ancestor": 7,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 464
+        },
+        {
+            "id": 16,
+            "fitness": 6.270041194427999,
+            "ancestor": 6,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 401
+        }
+    ]
+}

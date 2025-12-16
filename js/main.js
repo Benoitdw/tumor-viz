@@ -15,71 +15,85 @@ async function loadSimulations() {
     const tbody = table.querySelector('tbody');
 
     try {
-        // Get list of simulation folders
+        // Get list of configs and their samples
         const response = await fetch(`${RESULTS_PATH}/simulations.json`);
 
         if (!response.ok) {
             throw new Error('simulations.json not found. Please create this file.');
         }
 
-        const simulationIds = await response.json();
+        const configs = await response.json();
 
-        // Load each simulation's data including sequencing
-        const simulations = await Promise.all(
-            simulationIds.map(async (id) => {
-                try {
-                    const [simResponse, seqResponse] = await Promise.all([
-                        fetch(`${RESULTS_PATH}/${id}/simulation.json`),
-                        fetch(`${RESULTS_PATH}/${id}/sequencing.json`)
-                    ]);
+        // Load each config and its simulations
+        const configLoadPromises = configs.map(async ({ simulation_id: configId, samples }) => {
+            try {
+                // Load config data
+                const configResponse = await fetch(`${RESULTS_PATH}/${configId}/config.json`);
+                const configData = await configResponse.json();
 
-                    const simData = await simResponse.json();
-                    const seqData = await seqResponse.json();
+                // Load each sample simulation
+                const simulationPromises = samples.map(async (simNum) => {
+                    try {
+                        const [simResponse, seqResponse] = await Promise.all([
+                            fetch(`${RESULTS_PATH}/${configId}/${simNum}/simulation.json`),
+                            fetch(`${RESULTS_PATH}/${configId}/${simNum}/sequencing.json`)
+                        ]);
 
-                    return { id, simData, seqData };
-                } catch (err) {
-                    console.error(`Failed to load simulation ${id}:`, err);
-                    return null;
-                }
-            })
-        );
+                        if (!simResponse.ok || !seqResponse.ok) {
+                            return null;
+                        }
 
-        // Filter out failed loads
-        const validSimulations = simulations.filter(s => s !== null);
+                        const simData = await simResponse.json();
+                        const seqData = await seqResponse.json();
 
-        if (validSimulations.length === 0) {
+                        return {
+                            id: `${configId}_${simNum}`,
+                            configId,
+                            simNum,
+                            simData,
+                            seqData
+                        };
+                    } catch (err) {
+                        console.error(`Failed to load simulation ${configId}/${simNum}:`, err);
+                        return null;
+                    }
+                });
+
+                const simulations = (await Promise.all(simulationPromises)).filter(s => s !== null);
+
+                return {
+                    configId,
+                    configData,
+                    simulations
+                };
+            } catch (err) {
+                console.error(`Failed to load config ${configId}:`, err);
+                return null;
+            }
+        });
+
+        const loadedConfigs = (await Promise.all(configLoadPromises)).filter(c => c !== null);
+
+        if (loadedConfigs.length === 0) {
+            throw new Error('No valid configurations found');
+        }
+
+        // Flatten simulations array and build config groups
+        allSimulations = [];
+        configGroups = {};
+
+        loadedConfigs.forEach(({ configId, configData, simulations }) => {
+            allSimulations.push(...simulations);
+            configGroups[configId] = simulations;
+            configGroups[configId].configData = configData;
+        });
+
+        if (allSimulations.length === 0) {
             throw new Error('No valid simulations found');
         }
 
-        // Store simulations globally
-        allSimulations = validSimulations;
-
-        // Group simulations by config ID (format: configId_simNumber)
-        configGroups = {};
-        validSimulations.forEach(({ id, simData, seqData }) => {
-            const configId = id.split('_')[0];
-            if (!configGroups[configId]) {
-                configGroups[configId] = [];
-            }
-            configGroups[configId].push({ id, simData, seqData });
-        });
-
-        // Load config data for each group
-        await Promise.all(
-            Object.keys(configGroups).map(async (configId) => {
-                try {
-                    const configResponse = await fetch(`${RESULTS_PATH}/${configId}/config.json`);
-                    const configData = await configResponse.json();
-                    configGroups[configId].configData = configData;
-                } catch (err) {
-                    console.error(`Failed to load config for ${configId}:`, err);
-                    configGroups[configId].configData = null;
-                }
-            })
-        );
-
         // Initialize visibility state (all visible by default)
-        validSimulations.forEach(({ id }) => {
+        allSimulations.forEach(({ id }) => {
             visibilityState[id] = true;
         });
 

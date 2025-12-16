@@ -1,0 +1,85 @@
+{
+    "n_event": 781390,
+    "clone_proportion": {
+        "0": 0.4583918777464688,
+        "1": 0.5115693997630071,
+        "2": 0.01792034888631251,
+        "3": 0.01209448663054615,
+        "6": 2.3033867463126617e-05,
+        "8": 8.531062023380229e-07
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 597067,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 2.202369592459501,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 666279,
+            "tmb": 316
+        },
+        {
+            "id": 2,
+            "fitness": 0.9045345730630452,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 23253,
+            "tmb": 392
+        },
+        {
+            "id": 3,
+            "fitness": 3.548694280807647,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 15753,
+            "tmb": 455
+        },
+        {
+            "id": 4,
+            "fitness": 3.09462124403967,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 431
+        },
+        {
+            "id": 5,
+            "fitness": 2.5605620123007817,
+            "ancestor": 2,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 684
+        },
+        {
+            "id": 6,
+            "fitness": 1.3164419473865276,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 29,
+            "tmb": 604
+        },
+        {
+            "id": 7,
+            "fitness": 4.742062205295813,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 611
+        },
+        {
+            "id": 8,
+            "fitness": 4.382176734600014,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 612
+        }
+    ]
+}

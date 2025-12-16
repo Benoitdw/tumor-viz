@@ -33,29 +33,37 @@ async function loadConfigDetails() {
         if (!simsResponse.ok) {
             throw new Error('simulations.json not found');
         }
-        const allSimulationIds = await simsResponse.json();
+        const configs = await simsResponse.json();
 
-        // Filter simulations that belong to this config
-        const configSimulationIds = allSimulationIds.filter(id => id.startsWith(configId + '_'));
-
-        if (configSimulationIds.length === 0) {
+        // Find this config in the list
+        const configEntry = configs.find(c => c.simulation_id === configId);
+        if (!configEntry || !configEntry.samples || configEntry.samples.length === 0) {
             throw new Error(`No simulations found for configuration ${configId}`);
         }
 
         // Load each simulation's data
-        const simulationPromises = configSimulationIds.map(async (id) => {
+        const simulationPromises = configEntry.samples.map(async (simNum) => {
             try {
                 const [simResponse, seqResponse] = await Promise.all([
-                    fetch(`${RESULTS_PATH}/${id}/simulation.json`),
-                    fetch(`${RESULTS_PATH}/${id}/sequencing.json`)
+                    fetch(`${RESULTS_PATH}/${configId}/${simNum}/simulation.json`),
+                    fetch(`${RESULTS_PATH}/${configId}/${simNum}/sequencing.json`)
                 ]);
+
+                if (!simResponse.ok || !seqResponse.ok) {
+                    return null;
+                }
 
                 const simData = await simResponse.json();
                 const seqData = await seqResponse.json();
 
-                return { id, simData, seqData };
+                return {
+                    id: `${configId}_${simNum}`,
+                    simNum,
+                    simData,
+                    seqData
+                };
             } catch (err) {
-                console.error(`Failed to load simulation ${id}:`, err);
+                console.error(`Failed to load simulation ${configId}/${simNum}:`, err);
                 return null;
             }
         });
