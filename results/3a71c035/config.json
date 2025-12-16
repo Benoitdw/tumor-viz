@@ -1,0 +1,12 @@
+{
+    "N_max": 100000,
+    "M": 100000,
+    "picking": "leaves",
+    "mutation_rate": 9,
+    "depth_sequencing": 100,
+    "P_driver": 0.00867327960218178,
+    "driver_advantage": 1,
+    "min_alt_reads": 2,
+    "n_sequencing": 10,
+    "max_horizontal": 2
+}

@@ -388,11 +388,11 @@ function renderOverviewRegressionPlot() {
                     }
                 },
                 legend: {
-                    display: false  // Disable legend click to prevent toggling
+                    display: false
                 },
                 subtitle: {
                     display: true,
-                    text: `y = ${regression.slope.toFixed(3)}x + ${regression.intercept.toFixed(3)}`,
+                    text: `y = ${regression.slope.toFixed(3)}x + ${regression.intercept.toFixed(3)}, R² = ${regression.r2.toFixed(3)}`,
                     position: 'bottom',
                     font: {
                         size: 12,

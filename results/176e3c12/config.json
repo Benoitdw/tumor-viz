@@ -1,0 +1,12 @@
+{
+    "N_max": 500000,
+    "M": 500000,
+    "picking": "adjacent",
+    "mutation_rate": 19.226728938897075,
+    "depth_sequencing": 100,
+    "P_driver": 0.0001,
+    "driver_advantage": 1,
+    "min_alt_reads": 2,
+    "n_sequencing": 10,
+    "max_horizontal": 2
+}

@@ -121,6 +121,12 @@ function renderCloneProportionChart() {
     const ctx = document.getElementById('cloneProportionChart');
     const cloneProp = simulationData.clone_proportion;
 
+    // Create a map of clones by ID for quick lookup
+    const cloneMap = new Map();
+    simulationData.clones.forEach(clone => {
+        cloneMap.set(clone.id, clone);
+    });
+
     // Sort by proportion and get top 10
     const sortedClones = Object.entries(cloneProp)
         .sort((a, b) => b[1] - a[1])
@@ -156,6 +162,26 @@ function renderCloneProportionChart() {
             plugins: {
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(context) {
+                            return context[0].label;
+                        },
+                        label: function(context) {
+                            const cloneId = parseInt(sortedClones[context.dataIndex][0]);
+                            const clone = cloneMap.get(cloneId);
+                            if (!clone) return `Proportion: ${context.parsed.y}%`;
+
+                            return [
+                                `Proportion: ${context.parsed.y}%`,
+                                `Fitness: ${clone.fitness.toFixed(3)}`,
+                                `TMB: ${clone.tmb}`,
+                                `Ancestor: ${clone.ancestor !== null ? clone.ancestor : 'None (root)'}`,
+                                `Size: ${clone.size.toLocaleString()} cells`
+                            ];
+                        }
+                    }
                 }
             }
         }
