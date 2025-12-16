@@ -1,0 +1,83 @@
+{
+    "n_event": 705431,
+    "clone_proportion": {
+        "0": 0.5692316941771722,
+        "2": 0.34460356343763043,
+        "3": 0.07199256850905712,
+        "5": 0.014172173876140245
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 589085,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.282864653297835,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 376
+        },
+        {
+            "id": 2,
+            "fitness": 1.4174833417748558,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 357321,
+            "tmb": 358
+        },
+        {
+            "id": 3,
+            "fitness": 2.1010408535772145,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 74719,
+            "tmb": 526
+        },
+        {
+            "id": 4,
+            "fitness": 2.2915424253982732,
+            "ancestor": 2,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 803
+        },
+        {
+            "id": 5,
+            "fitness": 3.093490523015037,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 14679,
+            "tmb": 685
+        },
+        {
+            "id": 6,
+            "fitness": 3.1487351979784495,
+            "ancestor": 3,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 733
+        },
+        {
+            "id": 7,
+            "fitness": 4.139967847146906,
+            "ancestor": 5,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 880
+        },
+        {
+            "id": 8,
+            "fitness": 5.077243067054373,
+            "ancestor": 5,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 801
+        }
+    ]
+}

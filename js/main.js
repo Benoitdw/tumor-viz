@@ -1,8 +1,10 @@
-// Main page - List all simulations
+// Main page - List all simulations grouped by configuration
 const RESULTS_PATH = './results';
 
 let allSimulations = []; // Store all simulations data
+let configGroups = {}; // Store simulations grouped by config ID
 let visibilityState = {}; // Track which simulations are visible
+let expandedConfigs = {}; // Track which config rows are expanded
 let currentChart = null; // Store chart instance
 
 async function loadSimulations() {
@@ -52,9 +54,38 @@ async function loadSimulations() {
         // Store simulations globally
         allSimulations = validSimulations;
 
+        // Group simulations by config ID (format: configId_simNumber)
+        configGroups = {};
+        validSimulations.forEach(({ id, simData, seqData }) => {
+            const configId = id.split('_')[0];
+            if (!configGroups[configId]) {
+                configGroups[configId] = [];
+            }
+            configGroups[configId].push({ id, simData, seqData });
+        });
+
+        // Load config data for each group
+        await Promise.all(
+            Object.keys(configGroups).map(async (configId) => {
+                try {
+                    const configResponse = await fetch(`${RESULTS_PATH}/${configId}/config.json`);
+                    const configData = await configResponse.json();
+                    configGroups[configId].configData = configData;
+                } catch (err) {
+                    console.error(`Failed to load config for ${configId}:`, err);
+                    configGroups[configId].configData = null;
+                }
+            })
+        );
+
         // Initialize visibility state (all visible by default)
         validSimulations.forEach(({ id }) => {
             visibilityState[id] = true;
+        });
+
+        // Initialize expanded state (all collapsed by default)
+        Object.keys(configGroups).forEach(configId => {
+            expandedConfigs[configId] = false;
         });
 
         // Populate table
@@ -74,29 +105,76 @@ async function loadSimulations() {
     }
 }
 
-// Render simulations table
+// Render simulations table with hierarchical structure
 function renderSimulationsTable() {
     const tbody = document.querySelector('#simulationsTable tbody');
+    let rows = [];
 
-    tbody.innerHTML = allSimulations.map(({ id, simData }) => `
-        <tr>
-            <td class="text-center">
-                <span class="visibility-toggle ${visibilityState[id] ? '' : 'hidden'}"
-                      data-sim-id="${id}"
-                      onclick="toggleSimulationVisibility('${id}')"
-                      title="${visibilityState[id] ? 'Click to hide' : 'Click to show'}">
-                    ${visibilityState[id] ? '👁️' : '👁️‍🗨️'}
-                </span>
-            </td>
-            <td><strong>${id}</strong></td>
-            <td>${simData.n_event?.toLocaleString() || 'N/A'}</td>
-            <td>${simData.config?.N_max?.toLocaleString() || 'N/A'}</td>
-            <td>${simData.clones?.length || 'N/A'}</td>
-            <td>
-                <a href="simulation.html?id=${id}" class="btn btn-primary btn-sm">View Details</a>
-            </td>
-        </tr>
-    `).join('');
+    // Sort config IDs for consistent display
+    const sortedConfigIds = Object.keys(configGroups).sort();
+
+    sortedConfigIds.forEach(configId => {
+        const group = configGroups[configId];
+        const configData = group.configData || {};
+        const isExpanded = expandedConfigs[configId];
+
+        // Create config row
+        const configRow = `
+            <tr class="config-row" style="background-color: #f8f9fa; cursor: pointer;">
+                <td class="text-center">
+                    <span onclick="toggleConfigExpansion('${configId}'); event.stopPropagation();">
+                        ${isExpanded ? '▼' : '▶'}
+                    </span>
+                </td>
+                <td colspan="5" onclick="window.location.href='config.html?id=${configId}'">
+                    <strong>Config: ${configId}</strong>
+                    <span class="text-muted">(${group.length} simulations)</span>
+                    <br>
+                    <small class="text-muted">
+                        N_max: ${configData.N_max?.toLocaleString() || 'N/A'},
+                        M: ${configData.M?.toLocaleString() || 'N/A'},
+                        mutation_rate: ${configData.mutation_rate?.toFixed(2) || 'N/A'},
+                        P_death: ${configData.P_death?.toFixed(3) || 'N/A'}
+                    </small>
+                </td>
+            </tr>
+        `;
+        rows.push(configRow);
+
+        // Add simulation rows if expanded
+        if (isExpanded) {
+            group.forEach(({ id, simData }) => {
+                const simRow = `
+                    <tr class="simulation-row" style="background-color: #ffffff;">
+                        <td class="text-center" style="padding-left: 30px;">
+                            <span class="visibility-toggle ${visibilityState[id] ? '' : 'hidden'}"
+                                  data-sim-id="${id}"
+                                  onclick="toggleSimulationVisibility('${id}')"
+                                  title="${visibilityState[id] ? 'Click to hide' : 'Click to show'}">
+                                ${visibilityState[id] ? '👁️' : '👁️‍🗨️'}
+                            </span>
+                        </td>
+                        <td><strong>${id}</strong></td>
+                        <td>${simData.n_event?.toLocaleString() || 'N/A'}</td>
+                        <td>${simData.config?.N_max?.toLocaleString() || 'N/A'}</td>
+                        <td>${simData.clones?.length || 'N/A'}</td>
+                        <td>
+                            <a href="simulation.html?id=${id}" class="btn btn-primary btn-sm">View Details</a>
+                        </td>
+                    </tr>
+                `;
+                rows.push(simRow);
+            });
+        }
+    });
+
+    tbody.innerHTML = rows.join('');
+}
+
+// Toggle config expansion
+function toggleConfigExpansion(configId) {
+    expandedConfigs[configId] = !expandedConfigs[configId];
+    renderSimulationsTable();
 }
 
 // Toggle simulation visibility

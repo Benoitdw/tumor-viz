@@ -1,0 +1,13 @@
+{
+    "N_max": 265684,
+    "M": 265684,
+    "picking": "adjacent",
+    "mutation_rate": 45.45928360554096,
+    "P_death": 0.15537720429299232,
+    "D": 640,
+    "new_clone_frequency": 0.0365619899265494,
+    "depth_sequencing": 100,
+    "min_alt_reads": 2,
+    "n_sequencing": 10,
+    "max_horizontal": 2
+}

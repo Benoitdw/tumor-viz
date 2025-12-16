@@ -1,0 +1,32 @@
+{
+    "n_event": 790911,
+    "clone_proportion": {
+        "0": 1.0
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 1181577,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.7050449977304583,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 3,
+            "tmb": 527
+        },
+        {
+            "id": 2,
+            "fitness": 0.7384991317549892,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 525
+        }
+    ]
+}

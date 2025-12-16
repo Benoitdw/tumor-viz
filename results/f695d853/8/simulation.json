@@ -1,0 +1,49 @@
+{
+    "n_event": 240002,
+    "clone_proportion": {
+        "0": 0.6229895011871255,
+        "1": 0.3770104988128745
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 212541,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.4689353586995193,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 129129,
+            "tmb": 327
+        },
+        {
+            "id": 2,
+            "fitness": 1.5009679491640486,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 241
+        },
+        {
+            "id": 3,
+            "fitness": 2.0154332608765015,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 394
+        },
+        {
+            "id": 4,
+            "fitness": 2.2248297734525724,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 442
+        }
+    ]
+}

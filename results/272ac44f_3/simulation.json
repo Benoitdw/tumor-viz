@@ -1,0 +1,81 @@
+{
+    "n_event": 790911,
+    "config": {
+        "N_max": 790911,
+        "M": 790911,
+        "picking": "adjacent",
+        "mutation_rate": 48.86053480542841,
+        "P_death": 0.2528164182833383,
+        "D": 640,
+        "new_clone_frequency": 0.0024617222272283745,
+        "depth_sequencing": 100,
+        "min_alt_reads": 2,
+        "n_sequencing": 10,
+        "max_horizontal": 2
+    },
+    "clone_proportion": {
+        "0": 0.16718483265747938,
+        "1": 0.8323482075458262,
+        "4": 0.00045373435582946915,
+        "5": 1.0173416049988097e-06,
+        "6": 1.2208099259985716e-05
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 197569,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.671587427857729,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 984445,
+            "tmb": 471
+        },
+        {
+            "id": 2,
+            "fitness": 0.8148002665256554,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 437
+        },
+        {
+            "id": 3,
+            "fitness": 3.1690016505126604,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 622
+        },
+        {
+            "id": 4,
+            "fitness": 2.6824917583820524,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 547,
+            "tmb": 992
+        },
+        {
+            "id": 5,
+            "fitness": 3.2756219524083194,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 1116
+        },
+        {
+            "id": 6,
+            "fitness": 2.3204943831439806,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 13,
+            "tmb": 1155
+        }
+    ]
+}

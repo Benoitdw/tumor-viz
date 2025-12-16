@@ -1,0 +1,80 @@
+{
+    "n_event": 177979,
+    "config": {
+        "N_max": 177979,
+        "M": 177979,
+        "picking": "adjacent",
+        "mutation_rate": 39.614858336412496,
+        "P_death": 0.09993762237573747,
+        "D": 640,
+        "new_clone_frequency": 0.03820678469409611,
+        "depth_sequencing": 100,
+        "min_alt_reads": 2,
+        "n_sequencing": 10,
+        "max_horizontal": 2
+    },
+    "clone_proportion": {
+        "0": 0.4925029978098645,
+        "2": 0.5061261029132436,
+        "4": 0.0013081352136125343,
+        "6": 6.276406327938927e-05
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 157825,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.078658968675901,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 248
+        },
+        {
+            "id": 2,
+            "fitness": 1.4480222772330709,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 162201,
+            "tmb": 495
+        },
+        {
+            "id": 3,
+            "fitness": 1.944068299514523,
+            "ancestor": 2,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 560
+        },
+        {
+            "id": 4,
+            "fitness": 2.2218827847739497,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 419,
+            "tmb": 548
+        },
+        {
+            "id": 5,
+            "fitness": 2.860143366367614,
+            "ancestor": 4,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 595
+        },
+        {
+            "id": 6,
+            "fitness": 3.5887121324071107,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 19,
+            "tmb": 667
+        }
+    ]
+}

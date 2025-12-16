@@ -1,0 +1,159 @@
+{
+    "n_event": 304453,
+    "clone_proportion": {
+        "0": 0.8099236094095605,
+        "1": 0.017565002008524143,
+        "2": 0.004235402363224506,
+        "4": 0.15128103836531137,
+        "5": 0.0011201064101089603,
+        "6": 0.013776308749331187,
+        "7": 0.000766739506919824,
+        "8": 5.0004750451292875e-06,
+        "9": 0.0012651201864177096,
+        "10": 2.833602525573263e-05,
+        "11": 1.5001425135387863e-05,
+        "12": 8.33412507521548e-06,
+        "13": 1.6668250150430958e-06,
+        "14": 1.6668250150430958e-06,
+        "15": 5.0004750451292875e-06,
+        "16": 1.6668250150430958e-06
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 488361,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 0.8400522103267051,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 10577,
+            "tmb": 162
+        },
+        {
+            "id": 2,
+            "fitness": 1.1727399052158314,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 2547,
+            "tmb": 166
+        },
+        {
+            "id": 3,
+            "fitness": 2.227142692656168,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 234
+        },
+        {
+            "id": 4,
+            "fitness": 2.509340494725298,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 91199,
+            "tmb": 250
+        },
+        {
+            "id": 5,
+            "fitness": 1.8189724693566274,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 679,
+            "tmb": 294
+        },
+        {
+            "id": 6,
+            "fitness": 3.8384682878389715,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 8301,
+            "tmb": 406
+        },
+        {
+            "id": 7,
+            "fitness": 4.416958004275416,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 463,
+            "tmb": 328
+        },
+        {
+            "id": 8,
+            "fitness": 1.4003100867103841,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 3,
+            "tmb": 227
+        },
+        {
+            "id": 9,
+            "fitness": 4.410384110041012,
+            "ancestor": 6,
+            "dead_lineage": false,
+            "size": 763,
+            "tmb": 443
+        },
+        {
+            "id": 10,
+            "fitness": 4.910049002210714,
+            "ancestor": 6,
+            "dead_lineage": false,
+            "size": 17,
+            "tmb": 455
+        },
+        {
+            "id": 11,
+            "fitness": 3.4470890280843522,
+            "ancestor": 5,
+            "dead_lineage": false,
+            "size": 9,
+            "tmb": 504
+        },
+        {
+            "id": 12,
+            "fitness": 5.944438674142516,
+            "ancestor": 9,
+            "dead_lineage": false,
+            "size": 5,
+            "tmb": 489
+        },
+        {
+            "id": 13,
+            "fitness": 5.872197336853411,
+            "ancestor": 7,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 364
+        },
+        {
+            "id": 14,
+            "fitness": 5.013238425940796,
+            "ancestor": 7,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 481
+        },
+        {
+            "id": 15,
+            "fitness": 5.246281691450478,
+            "ancestor": 9,
+            "dead_lineage": false,
+            "size": 3,
+            "tmb": 491
+        },
+        {
+            "id": 16,
+            "fitness": 2.1234596527917162,
+            "ancestor": 5,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 462
+        }
+    ]
+}

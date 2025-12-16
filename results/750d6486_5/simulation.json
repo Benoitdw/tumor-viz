@@ -1,0 +1,81 @@
+{
+    "n_event": 828179,
+    "config": {
+        "N_max": 828179,
+        "M": 828179,
+        "picking": "adjacent",
+        "mutation_rate": 32.697841977347,
+        "P_death": 0.18262386704099548,
+        "D": 640,
+        "new_clone_frequency": 0.0223782462694906,
+        "depth_sequencing": 100,
+        "min_alt_reads": 2,
+        "n_sequencing": 10,
+        "max_horizontal": 2
+    },
+    "clone_proportion": {
+        "0": 0.8733182243476453,
+        "1": 0.12183470215199085,
+        "4": 0.004827944692795509,
+        "5": 5.821810999064352e-06,
+        "6": 1.3306996569289947e-05
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 1182371,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.0015475582037248,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 164749,
+            "tmb": 367
+        },
+        {
+            "id": 2,
+            "fitness": 0.6664347523178715,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 244
+        },
+        {
+            "id": 3,
+            "fitness": 2.5016186442247275,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 600
+        },
+        {
+            "id": 4,
+            "fitness": 1.5145418256880747,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 6555,
+            "tmb": 667
+        },
+        {
+            "id": 5,
+            "fitness": 1.784791116965048,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 7,
+            "tmb": 876
+        },
+        {
+            "id": 6,
+            "fitness": 2.4400350555113723,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 19,
+            "tmb": 950
+        }
+    ]
+}

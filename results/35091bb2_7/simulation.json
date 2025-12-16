@@ -1,0 +1,81 @@
+{
+    "n_event": 469121,
+    "config": {
+        "N_max": 469121,
+        "M": 469121,
+        "picking": "adjacent",
+        "mutation_rate": 46.76389827064685,
+        "P_death": 0.21654861459150962,
+        "D": 640,
+        "new_clone_frequency": 0.032405530103057696,
+        "depth_sequencing": 100,
+        "min_alt_reads": 2,
+        "n_sequencing": 10,
+        "max_horizontal": 2
+    },
+    "clone_proportion": {
+        "0": 0.6716847245295866,
+        "1": 0.3279826997582127,
+        "2": 0.0002663758074024103,
+        "4": 5.043802270341497e-05,
+        "5": 1.576188209481718e-05
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 494151,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 1.2053877832441904,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 241315,
+            "tmb": 631
+        },
+        {
+            "id": 2,
+            "fitness": 0.5046458375398645,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 195,
+            "tmb": 423
+        },
+        {
+            "id": 3,
+            "fitness": 1.847929323521928,
+            "ancestor": 1,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 681
+        },
+        {
+            "id": 4,
+            "fitness": 1.7355836320758855,
+            "ancestor": 1,
+            "dead_lineage": false,
+            "size": 35,
+            "tmb": 865
+        },
+        {
+            "id": 5,
+            "fitness": 0.8119564213941306,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 11,
+            "tmb": 566
+        },
+        {
+            "id": 6,
+            "fitness": 2.3425410267075892,
+            "ancestor": 2,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 667
+        }
+    ]
+}

@@ -1,0 +1,81 @@
+{
+    "n_event": 666553,
+    "config": {
+        "N_max": 666553,
+        "M": 666553,
+        "picking": "adjacent",
+        "mutation_rate": 36.08294125395163,
+        "P_death": 0.19521809055576528,
+        "D": 640,
+        "new_clone_frequency": 0.026490615282524298,
+        "depth_sequencing": 100,
+        "min_alt_reads": 2,
+        "n_sequencing": 10,
+        "max_horizontal": 2
+    },
+    "clone_proportion": {
+        "0": 0.8960542019897524,
+        "2": 0.10254983390465046,
+        "4": 0.0013535658032252389,
+        "5": 3.921842969407505e-05,
+        "6": 3.179872677897977e-06
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 961869,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 0.3089799093290777,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 461
+        },
+        {
+            "id": 2,
+            "fitness": 0.8615141865988087,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 109937,
+            "tmb": 420
+        },
+        {
+            "id": 3,
+            "fitness": 1.9977945121670915,
+            "ancestor": 2,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 540
+        },
+        {
+            "id": 4,
+            "fitness": 1.94102159644885,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 1467,
+            "tmb": 638
+        },
+        {
+            "id": 5,
+            "fitness": 2.818508207596083,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 45,
+            "tmb": 745
+        },
+        {
+            "id": 6,
+            "fitness": 3.0426931830702904,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 5,
+            "tmb": 745
+        }
+    ]
+}

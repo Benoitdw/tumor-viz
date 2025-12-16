@@ -1,0 +1,176 @@
+{
+    "n_event": 231713,
+    "clone_proportion": {
+        "0": 0.9860902884336098,
+        "2": 0.003987196376022838,
+        "3": 0.0019363867609823936,
+        "4": 0.0021212236790761675,
+        "5": 0.0031745007202771966,
+        "6": 0.0006073213023081144,
+        "7": 0.00011148893472322872,
+        "8": 4.1074870687505317e-05,
+        "9": 0.0014346865547278642,
+        "10": 0.0004342200615536276,
+        "12": 2.9339193348218083e-06,
+        "13": 4.400879002232713e-05,
+        "14": 2.9339193348218083e-06,
+        "15": 2.9339193348218083e-06,
+        "16": 2.9339193348218083e-06,
+        "17": 2.9339193348218083e-06,
+        "18": 2.9339193348218083e-06
+    },
+    "clones": [
+        {
+            "id": 0,
+            "fitness": 0,
+            "ancestor": null,
+            "dead_lineage": false,
+            "size": 376387,
+            "tmb": 100
+        },
+        {
+            "id": 1,
+            "fitness": 0.4118540894967512,
+            "ancestor": 0,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 217
+        },
+        {
+            "id": 2,
+            "fitness": 0.5495579630599396,
+            "ancestor": 0,
+            "dead_lineage": false,
+            "size": 1525,
+            "tmb": 208
+        },
+        {
+            "id": 3,
+            "fitness": 2.192257330347525,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 735,
+            "tmb": 267
+        },
+        {
+            "id": 4,
+            "fitness": 1.7750263928643695,
+            "ancestor": 2,
+            "dead_lineage": false,
+            "size": 817,
+            "tmb": 237
+        },
+        {
+            "id": 5,
+            "fitness": 3.136842536574923,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 1205,
+            "tmb": 286
+        },
+        {
+            "id": 6,
+            "fitness": 2.7136381987707754,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 227,
+            "tmb": 293
+        },
+        {
+            "id": 7,
+            "fitness": 3.308840037291091,
+            "ancestor": 3,
+            "dead_lineage": false,
+            "size": 43,
+            "tmb": 289
+        },
+        {
+            "id": 8,
+            "fitness": 2.4942225071675708,
+            "ancestor": 4,
+            "dead_lineage": false,
+            "size": 14,
+            "tmb": 255
+        },
+        {
+            "id": 9,
+            "fitness": 3.9212934931178554,
+            "ancestor": 5,
+            "dead_lineage": false,
+            "size": 555,
+            "tmb": 346
+        },
+        {
+            "id": 10,
+            "fitness": 3.7706285810032028,
+            "ancestor": 5,
+            "dead_lineage": false,
+            "size": 171,
+            "tmb": 309
+        },
+        {
+            "id": 11,
+            "fitness": 3.9384452956138425,
+            "ancestor": 6,
+            "dead_lineage": true,
+            "size": 1,
+            "tmb": 309
+        },
+        {
+            "id": 12,
+            "fitness": 4.646914137931015,
+            "ancestor": 9,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 402
+        },
+        {
+            "id": 13,
+            "fitness": 3.2207018534340124,
+            "ancestor": 6,
+            "dead_lineage": false,
+            "size": 16,
+            "tmb": 305
+        },
+        {
+            "id": 14,
+            "fitness": 4.5228867536622985,
+            "ancestor": 10,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 340
+        },
+        {
+            "id": 15,
+            "fitness": 5.193798351072339,
+            "ancestor": 9,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 389
+        },
+        {
+            "id": 16,
+            "fitness": 4.369528677132925,
+            "ancestor": 13,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 315
+        },
+        {
+            "id": 17,
+            "fitness": 5.090185902032688,
+            "ancestor": 10,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 340
+        },
+        {
+            "id": 18,
+            "fitness": 3.776074279518949,
+            "ancestor": 8,
+            "dead_lineage": false,
+            "size": 1,
+            "tmb": 278
+        }
+    ]
+}
