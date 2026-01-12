@@ -93,8 +93,8 @@ async function loadSimulations() {
         }
 
         // Initialize visibility state (all visible by default)
-        allSimulations.forEach(({ id }) => {
-            visibilityState[id] = true;
+        allSimulations.forEach(({ id }, index) => {
+            visibilityState[id] = index <1000;
         });
 
         // Initialize expanded state (all collapsed by default)
@@ -147,8 +147,9 @@ function renderSimulationsTable() {
                     <small class="text-muted">
                         N_max: ${configData.N_max?.toLocaleString() || 'N/A'},
                         M: ${configData.M?.toLocaleString() || 'N/A'},
+                        Picking strategy : ${configData.picking?.toLocaleString() || 'N/A'},
                         mutation_rate: ${configData.mutation_rate?.toFixed(2) || 'N/A'},
-                        P_death: ${configData.P_death?.toFixed(3) || 'N/A'}
+                        P_death: ${configData.initial_p_death?.toFixed(3) || 'N/A'}
                     </small>
                 </td>
             </tr>

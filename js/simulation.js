@@ -12,7 +12,6 @@ function getSimulationId() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
 }
-
 // Load simulation data
 async function loadSimulationData(simulationId) {
     const loading = document.getElementById('loading');
@@ -93,16 +92,22 @@ function renderConfig() {
             <strong>N Events:</strong><br>${simulationData.n_event?.toLocaleString() || 'N/A'}
         </div>
         <div class="col-md-3">
-            <strong>N Max:</strong><br>${configData.N_max?.toLocaleString() || 'N/A'}
+            <strong>Death cells:</strong><br>${simulationData.death_cells?.toLocaleString() || 'N/A'}
         </div>
         <div class="col-md-3">
             <strong>Total Clones:</strong><br>${simulationData.clones?.length || 'N/A'}
         </div>
         <div class="col-md-3">
+            <strong>Death Clones:</strong><br>${simulationData.death_clones?.toLocaleString() || 'N/A'}
+        </div>
+        <div class="col-md-3">
             <strong>Mutation Rate:</strong><br>${configData.mutation_rate || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
-            <strong>P Death:</strong><br>${configData.P_death || 'N/A'}
+            <strong>P Death:</strong><br>${configData.initial_p_death?.toFixed(3) || 'N/A'}
+        </div>
+        <div class="col-md-3 mt-3">
+            <strong>P Driver:</strong><br>${configData.P_driver?.toFixed(3) || 'N/A'}
         </div>
         <div class="col-md-3 mt-3">
             <strong>Sequencing Depth:</strong><br>${configData.depth_sequencing || 'N/A'}
@@ -194,7 +199,7 @@ function renderPhylogeneticTree() {
     const allClones = simulationData.clones;
 
     // Filter clones based on toggle state
-    const clones = showAllClones ? allClones : allClones.filter(c => c.size >= 100);
+    const clones = showAllClones ? allClones : allClones.filter(c => c.size >= 100 || c.ancestor == null);
 
     // Build tree structure with filtered clones
     const treeData = buildTreeStructure(clones);

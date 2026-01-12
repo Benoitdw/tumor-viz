@@ -136,7 +136,7 @@ function renderSimulationsTable() {
             </td>
             <td><strong>${id}</strong></td>
             <td>${simData.n_event?.toLocaleString() || 'N/A'}</td>
-            <td>${simData.config?.N_max?.toLocaleString() || 'N/A'}</td>
+            <td>${simData.config?.M?.toLocaleString() || 'N/A'}</td>
             <td>${simData.clones?.length || 'N/A'}</td>
             <td>
                 <a href="simulation.html?id=${id}" class="btn btn-primary btn-sm">View Details</a>
