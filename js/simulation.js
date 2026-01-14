@@ -6,6 +6,7 @@ let sequencingData = null;
 let configData = null;
 let showAllClones = false; // Filter state for phylogenetic tree
 let currentSimulationId = null; // Store current simulation ID for sorting
+let top20CloneIds = []; // Store top 20 clone IDs for phylogenetic tree
 
 // Get simulation ID from URL
 function getSimulationId() {
@@ -57,7 +58,7 @@ async function loadSimulationData(simulationId) {
         document.getElementById('toggleFilterBtn').addEventListener('click', () => {
             showAllClones = !showAllClones;
             const btn = document.getElementById('toggleFilterBtn');
-            btn.textContent = showAllClones ? 'Hide Small Clones (<100 cells)' : 'Show All Clones';
+            btn.textContent = showAllClones ? 'Show Top 20 Only' : 'Show All Clones';
             renderPhylogeneticTree();
         });
 
@@ -121,7 +122,7 @@ function renderConfig() {
     `;
 }
 
-// Render clone proportion chart (top 10)
+// Render clone proportion chart (top 20)
 function renderCloneProportionChart() {
     const ctx = document.getElementById('cloneProportionChart');
     const cloneProp = simulationData.clone_proportion;
@@ -132,10 +133,13 @@ function renderCloneProportionChart() {
         cloneMap.set(clone.id, clone);
     });
 
-    // Sort by proportion and get top 10
+    // Sort by proportion and get top 20
     const sortedClones = Object.entries(cloneProp)
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 10);
+        .slice(0, 20);
+
+    // Store top 20 clone IDs for phylogenetic tree
+    top20CloneIds = sortedClones.map(([id, _]) => parseInt(id));
 
     const labels = sortedClones.map(([id, _]) => `Clone ${id}`);
     const data = sortedClones.map(([_, prop]) => (prop * 100).toFixed(2));
@@ -198,14 +202,39 @@ function renderPhylogeneticTree() {
     const container = document.getElementById('phylogeneticTree');
     const allClones = simulationData.clones;
 
-    // Filter clones based on toggle state
-    const clones = showAllClones ? allClones : allClones.filter(c => c.size >= 100 || c.ancestor == null);
+    // Build clone map
+    const cloneMap = new Map();
+    allClones.forEach(clone => {
+        cloneMap.set(clone.id, clone);
+    });
+
+    let clones;
+    if (showAllClones) {
+        // Show all clones
+        clones = allClones;
+    } else {
+        // Show only top 20 clones and their ancestors
+        const relevantCloneIds = new Set(top20CloneIds);
+
+        // Add all ancestors for each top 20 clone
+        top20CloneIds.forEach(cloneId => {
+            let currentId = cloneId;
+            while (currentId !== null) {
+                const clone = cloneMap.get(currentId);
+                if (!clone) break;
+                relevantCloneIds.add(currentId);
+                currentId = clone.ancestor;
+            }
+        });
+
+        clones = allClones.filter(c => relevantCloneIds.has(c.id));
+    }
 
     // Build tree structure with filtered clones
     const treeData = buildTreeStructure(clones);
 
     if (!treeData) {
-        container.innerHTML = '<p class="text-muted">No clones with 100+ cells found</p>';
+        container.innerHTML = '<p class="text-muted">No clones found</p>';
         return;
     }
 
@@ -231,14 +260,18 @@ function renderPhylogeneticTree() {
     treeLayout(root);
 
     // Calculate node sizes based on clone size
+    const minSize = d3.min(clones, d => d.size);
     const maxSize = d3.max(clones, d => d.size);
     const radiusScale = d3.scaleSqrt()
-        .domain([100, maxSize])
+        .domain([minSize, maxSize])
         .range([3, 20]);
+
+    // Remove any existing tooltip
+    d3.selectAll('.phylo-tooltip').remove();
 
     // Create tooltip div
     const tooltip = d3.select('body').append('div')
-        .attr('class', 'tooltip')
+        .attr('class', 'phylo-tooltip')
         .style('position', 'absolute')
         .style('visibility', 'hidden')
         .style('background-color', 'rgba(0, 0, 0, 0.8)')
@@ -276,13 +309,16 @@ function renderPhylogeneticTree() {
                 .style('stroke', '#333')
                 .style('stroke-width', '3px');
 
+            const proportion = simulationData.clone_proportion[d.data.id];
+            const proportionPercent = proportion ? (proportion * 100).toFixed(2) : '0.00';
+
             tooltip.html(`
                 <strong>Clone ${d.data.id}</strong><br/>
-                <strong>Size:</strong> ${d.data.size.toLocaleString()} cells<br/>
+                <strong>Proportion:</strong> ${proportionPercent}%<br/>
                 <strong>Fitness:</strong> ${d.data.fitness.toFixed(3)}<br/>
                 <strong>TMB:</strong> ${d.data.tmb}<br/>
                 <strong>Ancestor:</strong> ${d.data.ancestor !== null ? d.data.ancestor : 'None (root)'}<br/>
-                <strong>Status:</strong> ${d.data.dead_lineage ? 'Dead lineage' : 'Active'}
+                <strong>Size:</strong> ${d.data.size.toLocaleString()} cells
             `)
             .style('visibility', 'visible');
         })
@@ -301,7 +337,13 @@ function renderPhylogeneticTree() {
     nodes.append('text')
         .attr('dx', d => radiusScale(d.data.size) + 5)
         .attr('dy', 4)
-        .text(d => `Clone ${d.data.id} (${d.data.size.toLocaleString()})`);
+        .text(d => {
+            // Only show text label for top 20 clones
+            if (top20CloneIds.includes(d.data.id)) {
+                return `Clone ${d.data.id} (${d.data.size.toLocaleString()})`;
+            }
+            return ''; // No label for ancestor clones
+        });
 
     // Add legend
     const legend = svg.append('g')
@@ -339,7 +381,7 @@ function renderPhylogeneticTree() {
             .attr('y', 70)
             .style('font-size', '11px')
             .style('font-style', 'italic')
-            .text('(Clones < 100 cells hidden)');
+            .text('(Showing top 20 clones)');
     }
 }
 
@@ -418,6 +460,7 @@ function renderRegressionPlot() {
         return {
             x: mrcaClone.fitness,
             y: mrcaClone.tmb,
+            mrca: data.mrca,
             label: `Seq #${seqId}`
         };
     }).filter(point => point !== null);
@@ -520,7 +563,8 @@ function renderRegressionPlot() {
                                 return [
                                     point.label,
                                     `Fitness: ${point.x.toFixed(3)}`,
-                                    `TMB: ${point.y}`
+                                    `TMB: ${point.y}`,
+                                    `MRCA: ${point.mrca}`
                                 ];
                             }
                             return `y = ${point.y.toFixed(2)}`;
