@@ -1,0 +1,14 @@
+{
+    "N_max": 50000,
+    "M": 10,
+    "picking": "adjacent",
+    "mutation_rate": 10,
+    "depth_sequencing": 100,
+    "dying_start": 640,
+    "initial_p_death": 0.0,
+    "P_driver": 0.0004,
+    "min_alt_reads": 2,
+    "n_sequencing": 1000,
+    "max_horizontal": 2,
+    "neutral_evolution": true
+}

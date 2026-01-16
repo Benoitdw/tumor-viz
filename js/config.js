@@ -187,8 +187,10 @@ function renderRegressionPlot() {
 
     const ctx = document.getElementById('configRegressionPlot');
 
-    // Filter only visible simulations
-    const visibleSimulations = simulations.filter(({ id }) => visibilityState[id]);
+    // Filter only visible simulations, excluding "neutral" samples
+    const visibleSimulations = simulations.filter(({ id, simNum }) => {
+        return visibilityState[id] && simNum !== 'neutral';
+    });
 
     // Generate a color for each simulation
     const colors = [

@@ -6,6 +6,7 @@ let configGroups = {}; // Store simulations grouped by config ID
 let visibilityState = {}; // Track which simulations are visible
 let expandedConfigs = {}; // Track which config rows are expanded
 let currentChart = null; // Store chart instance
+let resumeData = null; // Store resume.tsv data for filtering
 
 async function loadSimulations() {
     const loading = document.getElementById('loading');
@@ -15,6 +16,26 @@ async function loadSimulations() {
     const tbody = table.querySelector('tbody');
 
     try {
+        // Setup filter UI first
+        setupFilterUI();
+        renderActiveFilters('activeFilters');
+
+        // Get active filters
+        const activeFilters = getActiveFilters();
+        const hasFilters = Object.keys(activeFilters).length > 0;
+
+        // Load resume.tsv if filters are active
+        let allowedConfigSamplesMap = null;
+        if (hasFilters) {
+            resumeData = await loadResumeData();
+            const filteredData = filterData(resumeData, activeFilters);
+            allowedConfigSamplesMap = buildConfigSamplesMap(filteredData);
+
+            if (Object.keys(allowedConfigSamplesMap).length === 0) {
+                throw new Error('No simulations match the active filters.');
+            }
+        }
+
         // Get list of configs and their samples
         const response = await fetch(`${RESULTS_PATH}/simulations.json`);
 
@@ -24,8 +45,45 @@ async function loadSimulations() {
 
         const configs = await response.json();
 
+        // Filter configs if needed and intersect samples
+        let configsToLoad = configs;
+        if (allowedConfigSamplesMap) {
+            // Only load configs that have at least one allowed simulation
+            // AND filter samples to only include those present in resume.tsv
+            configsToLoad = configs
+                .filter(({ simulation_id: configId }) => {
+                    return allowedConfigSamplesMap.hasOwnProperty(configId);
+                })
+                .map(({ simulation_id: configId, samples }) => {
+                    // Intersect samples with those available in filtered resume data
+                    const allowedSamples = allowedConfigSamplesMap[configId];
+                    const filteredSamples = samples.filter(sample => allowedSamples.has(sample));
+                    return { simulation_id: configId, samples: filteredSamples };
+                })
+                .filter(({ samples }) => samples.length > 0);
+
+            if (configsToLoad.length === 0) {
+                throw new Error('No configurations match the active filters.');
+            }
+        }
+
+        // Limit to max 15 random configs for performance
+        const MAX_CONFIGS = 15;
+        const totalConfigs = configsToLoad.length;
+        if (configsToLoad.length > MAX_CONFIGS) {
+            // Shuffle array and take first 15
+            configsToLoad = configsToLoad
+                .sort(() => Math.random() - 0.5)
+                .slice(0, MAX_CONFIGS);
+
+            // Show warning
+            const warningDiv = document.getElementById('limitWarning');
+            warningDiv.textContent = `⚠️ For performance reasons, only ${MAX_CONFIGS} out of ${totalConfigs} configurations are randomly displayed. Use filters to refine your selection.`;
+            warningDiv.classList.remove('d-none');
+        }
+
         // Load each config and its simulations
-        const configLoadPromises = configs.map(async ({ simulation_id: configId, samples }) => {
+        const configLoadPromises = configsToLoad.map(async ({ simulation_id: configId, samples }) => {
             try {
                 // Load config data
                 const configResponse = await fetch(`${RESULTS_PATH}/${configId}/config.json`);
@@ -237,8 +295,10 @@ function renderOverviewRegressionPlot() {
 
     const ctx = document.getElementById('overviewRegressionPlot');
 
-    // Filter only visible simulations
-    const visibleSimulations = allSimulations.filter(({ id }) => visibilityState[id]);
+    // Filter only visible simulations, excluding "neutral" samples
+    const visibleSimulations = allSimulations.filter(({ id, simNum }) => {
+        return visibilityState[id] && simNum !== 'neutral';
+    });
 
     // Generate a color for each simulation
     const colors = [
